@@ -112,10 +112,7 @@
 }
 
 .ex-7-img:hover {
-    filter: sepia(1);
-}
-.ex-7-img:active {
-    filter: saturate(5);
+    filter: sepia(1) saturate(5);
 }
 
 .ex-8-img:hover {
@@ -145,17 +142,16 @@
 .ex-11-icon:hover {
     animation-name: inverso;
     animation-duration: 2s;
-    animation-timing-function: ease-in;
 }
 
 @keyframes inverso {
     from {
-        transform: rotate(360deg);
+        transform: rotate(0);
     }
-    50% {
-        transform: rotate(60deg);
+    80% {
+        transform: rotate(270deg);
     }
     to {
-        transform: rotate(360deg);
-    }
-}
+        transform: rotate(0);
+    } 
+} 
