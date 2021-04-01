@@ -33,19 +33,24 @@
     width: 500px;
 }
 
-.ex-7-img {
+.ex-7-img,
+.ex-8-img {
     transition: all 0.5s;
 }
 
 .ex-9-img {
     margin: 50px 100px;
     width: 400px;
+    transition: all 0.5s;
 }
 .ex-10-icon {
     font-size: 60px;
+    animation: ex-10-icon 4s linear infinite;
 }
 .ex-11-icon {
     font-size: 60px;
+    animation-name: ex-11-icon;
+    animation: ex-11-icon 4s linear infinite;
 }
 .ex-12-button, .ex-13-button {
     position: relative;
@@ -109,7 +114,48 @@
 .ex-7-img:hover {
     filter: sepia(1);
 }
-
 .ex-7-img:active {
     filter: saturate(5);
+}
+
+.ex-8-img:hover {
+    filter:grayscale(1);
+    opacity: 80%;
+    border-radius: 15px;
+}
+
+
+.ex-9-img:hover {
+    filter:saturate(3);
+    opacity: 60%;
+    transform: scale(1.5,1.5);
+    border-radius: 20px;
+}
+
+@keyframes ex-10-icon {
+    100% {transform: rotate(1turn);
+    }  
+}
+
+@keyframes ex-11-icon {
+    100% {transform: rotate(1turn); 
+    } 
+}
+
+.ex-11-icon:hover {
+    animation-name: inverso;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+}
+
+@keyframes inverso {
+    from {
+        transform: rotate(360deg);
+    }
+    50% {
+        transform: rotate(60deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
