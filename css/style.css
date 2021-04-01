@@ -49,7 +49,6 @@
 }
 .ex-11-icon {
     font-size: 60px;
-    animation-name: ex-11-icon;
     animation: ex-11-icon 4s linear infinite;
 }
 .ex-12-button, .ex-13-button {
@@ -73,6 +72,7 @@
     width: 60px;
     height: 20px;
 }
+
 .ex-12-bottom-white, .ex-13-bottom-white {
     position: absolute;
     bottom: -10px;
@@ -155,3 +155,35 @@
         transform: rotate(0);
     } 
 } 
+
+/* bonus */
+
+.ex-12-top-white {
+    animation: line-btn12 4s linear infinite;
+    animation-direction: alternate;
+}
+
+.ex-12-bottom-white {
+    animation: line-btn12r 4s linear infinite;
+    animation-direction: alternate;
+}
+
+@keyframes line-btn12 {
+    from{
+        left: 10%;
+    }
+
+    to{
+        left: 60%;
+    }
+}
+
+@keyframes line-btn12r {
+    from{
+        right: 20%;
+    }
+
+    to{
+        right: 60%;
+    }
+}
